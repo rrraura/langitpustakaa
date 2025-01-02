@@ -1,0 +1,258 @@
+<!DOCTYPE html>>
+<html>
+    <head>
+        <title>web perpustakaan</title>
+    </head>
+
+    <script type="text/javascript">
+    document.querySelector('form').addEventListener('submit', function(event) {
+        const username = document.getElementById('username').value.trim();
+        const password = document.getElementById('password').value.trim();
+        
+        // Reset error messages
+        let errorMessage = '';
+
+        // Validasi Username
+        if (username === '') {
+            errorMessage += 'Username tidak boleh kosong.\n';
+        } else if (username.length < 4) {
+            errorMessage += 'Username harus minimal 4 karakter.\n';
+        }
+
+        // Validasi Password
+        if (password === '') {
+            errorMessage += 'Password tidak boleh kosong.\n';
+        } else if (password.length < 6) {
+            errorMessage += 'Password harus minimal 6 karakter.\n';
+        }
+
+        // Tampilkan pesan error jika ada
+        if (errorMessage !== '') {
+            alert(errorMessage);
+            event.preventDefault(); // Mencegah form dikirim jika ada error
+        }
+    });
+        document.getElementById("formTransaksi").addEventListener("submit", function(e) {
+e.preventDefault(); // Mencegah pengiriman form secara default
+
+const namaBuku = document.getElementById("namaBuku").value.trim();
+const kategoriBuku = document.getElementById("kategoriBuku").value;
+const jumlah = document.getElementById("jumlah").value;
+
+if (namaBuku === "") {
+    alert("Nama buku harus diisi!");
+    return;
+}
+
+if (kategoriBuku === "") {
+    alert("Kategori buku harus dipilih!");
+    return;
+}
+
+if (jumlah <= 0) {
+    alert("Jumlah buku harus lebih dari 0!");
+    return;
+}
+
+alert("Data berhasil disimpan!");
+});
+    </script>
+
+    <style>
+        /* Styling css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #f08080;
+    color: white;
+    padding: 1em 0;
+    text-align: center;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+header .logo img {
+    width: 200px;
+    height: 200px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 1em 0 0;
+    gap: 1.5em;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main {
+    padding: 2em;
+}
+
+section {
+    margin-bottom: 2em;
+    background-color: white;
+    padding: 1em;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+form label {
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+form input, form select, form button {
+    width: 100%;
+    padding: 0.5em;
+    margin-bottom: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #f0768b;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: gray;
+}
+
+/* Products Section */
+.products {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.products h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.product-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.product-card {
+    background: #ff69b4;
+    padding: 1.5rem;
+    margin: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    text-align: center;
+    width: 30%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.product-card h3 {
+    margin: 1rem 0;
+    font-size: 1.5rem;
+}
+
+.product-card p {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.product-card button {
+    background-color: white;
+    color: white;
+    border: none;
+    padding: 0.8rem 2rem;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.product-card button:hover {
+    background-color: #e64a19;
+}
+
+footer {
+    background-color: #f08080;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+    </style>
+    <body>
+        <header>
+            <div class="logo">
+                <img src="img/Langit_Pustaka-removebg-preview.png" alt="Langit Pustaka" />
+                <h1>Langit Pustaka</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#login.html">Login</a></li>
+                    <li><a href="beranda.html">Beranda</a></li>
+                    <li><a href="transaksi.html">Transaksi</a></li>
+                    <li><a href="profil.html">Profil</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <!-- Halaman Login -->
+            <section id="login.html" class="container">
+                <h2>Login</h2>
+                <form>
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required>
+    
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+    
+                    <button type="submit">Login</button>
+                </form>
+            </section>
+        </main>
+        
+    </body>
+
+    <footer>
+        <p>&copy; 2025 Perpustakaan Digital. Hak Cipta Dilindungi.</p>
+    </footer>
+    
+</html>

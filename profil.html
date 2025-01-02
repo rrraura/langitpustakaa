@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>web perpustakaan</title>
+    </head>
+
+    <script type="text/javascript">
+        function fun() {
+            alert ("Terimakasih sudah melalukan login")
+        }
+        document.getElementById("formTransaksi").addEventListener("submit", function(e) {
+e.preventDefault(); // Mencegah pengiriman form secara default
+
+const namaBuku = document.getElementById("namaBuku").value.trim();
+const kategoriBuku = document.getElementById("kategoriBuku").value;
+const jumlah = document.getElementById("jumlah").value;
+
+if (namaBuku === "") {
+    alert("Nama buku harus diisi!");
+    return;
+}
+
+if (kategoriBuku === "") {
+    alert("Kategori buku harus dipilih!");
+    return;
+}
+
+if (jumlah <= 0) {
+    alert("Jumlah buku harus lebih dari 0!");
+    return;
+}
+
+alert("Data berhasil disimpan!");
+// Tambahkan logika penyimpanan data di sini
+});
+    </script>
+
+    <style>
+        /* Styling css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #f08080;
+    color: white;
+    padding: 1em 0;
+    text-align: center;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+header .logo img {
+    width: 200px;
+    height: 200px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 1em 0 0;
+    gap: 1.5em;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main {
+    padding: 2em;
+}
+
+section {
+    margin-bottom: 2em;
+    background-color: white;
+    padding: 1em;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+form label {
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+form input, form select, form button {
+    width: 100%;
+    padding: 0.5em;
+    margin-bottom: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #f0768b;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: gray;
+}
+
+/* Products Section */
+.products {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.products h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.product-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.product-card {
+    background: #ff69b4;
+    padding: 1.5rem;
+    margin: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    text-align: center;
+    width: 30%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.product-card h3 {
+    margin: 1rem 0;
+    font-size: 1.5rem;
+}
+
+.product-card p {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.product-card button {
+    background-color: #ffc0cb;
+    color: white;
+    border: none;
+    padding: 0.8rem 2rem;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.product-card button:hover {
+    background-color: black;
+}
+
+footer {
+    background-color: #f08080;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+    </style>
+    <body>
+        <header>
+            <div class="logo">
+                <img src="img/Langit_Pustaka-removebg-preview.png" alt="Langit Pustaka" />
+                <h1>Langit Pustaka</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="beranda.html">Beranda</a></li>
+                    <li><a href="transaksi.html">Transaksi</a></li>
+                    <li><a href="profil.html">Profil</a></li>
+                </ul>
+            </nav>
+        </header>
+    
+        <main>
+
+            <!-- Halaman Profil -->
+            <section id="profil.html" class="container">
+                <h2>Profil</h2>
+                <h1>🌤️ Kenapa "Langit Pustaka"?</h1>
+                    <p>1. Luasan Ilmu Tanpa Batas: Kita percaya bahwa seperti langit, ilmu tidak memiliki akhir.</p>
+                    <p>2. Ruang Kreatif dan Inspiratif: Perpustakaan ini tidak hanya tempat membaca, tetapi juga ruang menciptakan ide dan berdiskusi.</p>
+                    <p>3. Atmosfer Tenang dan Nyaman: Setiap sudut Langit Pustaka dirancang untuk memberikan ketenangan dan kenyamanan dalam mengeksplorasi dunia literasi.</p>
+                <p>Langit tak berbatas, begitu pula ilmu dan imajinasi.
+                    Langit Pustaka adalah tempat di mana setiap buku adalah bintang, dan setiap halaman adalah cakrawala baru untuk dijelajahi.</p>
+                <p>🌟 Visi Kami
+                    Menjadi perpustakaan yang membuka peluang belajar dan eksplorasi tanpa batas, setinggi dan seluas langit.</p>
+                    
+                    <p>🌙 Misi Kami
+                    <p>*budaya literasi di setiap lapisan masyarakat.</p>
+                    <p>*Menyediakan akses ilmu pengetahuan melalui koleksi buku yang beragam dan berkualitas.</p>
+                    <p>*ruang baca yang nyaman dan inspiratif untuk semua kalangan.</p>
+                    <p>*program literasi dan kegiatan edukasi untuk memperkaya wawasan komunitas.</p>
+            </section>
+
+            <!-- Product Section -->
+    <section id="products" class="products">
+        <h2>Produk Kami</h2>
+        <div class="product-container">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <img src="img/RESENSI NOVEL MARIPOSA LULUK HF.jpg" alt="Buku MARIPOSA">
+                <h3>Buku Mariposa</h3>
+                <p>Rp 150.000</p>
+                <button class="add-to-cart">Tambah ke Keranjang</button>
+            </div>
+            <!-- Product 2 -->
+            <div class="product-card">
+                <img src="img/Book Cover Illustration _Layang-layang Cita_.jpg" alt="Buku Layang-layang Cita">
+                <h3>Layang-layang Cita</h3>
+                <p>Rp 200.000</p>
+                <button class="add-to-cart">Tambah ke Keranjang</button>
+            </div>
+            <!-- Product 3 -->
+            <div class="product-card">
+                <img src="img/Mozachiko.jpg" alt="Buku Mozachiko">
+                <h3>Mozachiko</h3>
+                <p>Rp 120.000</p>
+                <button class="add-to-cart">Tambah ke Keranjang</button>
+            </div>
+            <!--- Product 4 -->
+            <div class="product-card">
+                <img src="img/perahu kertas.jpg" alt="Buku Perahu kertas">
+                <h3>Perahu Kertas</h3>
+                <p>Rp 170.000</p>
+                <button class="add-to-cart">Tambah ke Keranjang</button>
+            </div>
+            <!--- Product 5 -->
+            <div class="product-card">
+                <img src="img/galaksi.jpg" alt="Buku Galaksi">
+                <h3>Galaksi</h3>
+                <p>Rp 190.000</p>
+                <button class="add-to-cart">Tambah ke Keranjang</button>
+            </div>
+            <!--- Product 6 -->
+            <div class="product-card">
+                <img src="img/HUKUM KEARIFAN LOKAL, SUATU PENGANTAR HUKUM ADAT _ ANNUHADESIGN (1).jpg" alt="Buku Hukum kearifan lokal">
+                <h3>Hukum Kearifan Lokal</h3>
+                <p>Rp 150.000</p>
+                <button class="add-to-cart">Tambah ke Keranjang</button>
+            </div>
+            <!--- Product 7 -->
+            <div class="product-card">
+                <img src="img/to kill a mockingbing.jpg" alt="Buku to kill a">
+                <h3>To Kill a Mockingbird</h3>
+                <p>Rp 180.000</p>
+                <button class="add-to-cart">Tambah ke Keranjang</button>
+            </div>
+        </div>
+    </section>
+        </main>
+    
+        <footer>
+            <p>&copy; 2025 Perpustakaan Digital. Hak Cipta Dilindungi.</p>
+        </footer>
+    
+        <script src="script.js"></script>
+    </body>
+    </html>
